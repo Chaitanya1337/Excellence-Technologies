@@ -3,10 +3,12 @@ req.open("GET", "http://www.example.com/api/get/1");
 req.send();
 req.onload = () => {
 console.log(req);
-if (req.status === 200)
+if (req.status == 200)
 {
 console.log(JSON.parse(req.response ));
 } else {
+
 console.log('error ${req.status} ${req.statusText}`);
+
 }
 }
