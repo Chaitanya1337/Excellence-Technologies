@@ -1,14 +1,16 @@
 const arr = [1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1,0, 1, 0, 1];
+var max = 0;
 const MaxConsecutive = (arr = []) => {
    var count = 0;
-		var max = 0;
+		
 		for(var i = 0; i < arr.length; i++){
-			if(arr[i] === 0)
+			if(arr[i] == 0)
 				count = 0;
 			else
 				count++;
 			max = count > max ? count : max;
 		}
-    console.log(max);
-		return 0;
+    
+		return console.log(max);
     }
+   MaxConsecutive (arr );
