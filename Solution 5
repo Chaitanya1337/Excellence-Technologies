@@ -1,0 +1,21 @@
+const sortObject= ({ obj, field }) => {
+   obj.sort(function(a, b) {
+      const fieldA = typeof a[field] === 'string' ? a[field].toLowerCase() : a[field];
+      const fieldB = typeof b[field] === 'string' ? b[field].toLowerCase() : b[field];
+        let result = fieldA > fieldB ? 1 : -1;
+      return result;
+   });
+   return obj;
+}
+
+var obj = [
+ {id : 4, name : 'abc'},
+ {id : 10, name : 'ab2'},
+ {id : 5, name : 'abc3'},
+ {id : 6, name : 'abc5'}
+];
+
+var arr = sortObject({ obj, field: 'id'});
+for(let i = 0; i < arr.length; i++){
+  console.log(arr[i]);
+}
