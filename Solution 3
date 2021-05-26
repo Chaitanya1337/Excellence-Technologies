@@ -1,0 +1,11 @@
+let a={1,2,3,4,5,6,7,8,9,............];
+var check=0;
+for(var i=0;i<a.length;i++){
+if(a[i] === a[i+1]){
+console.log(a[i]);
+break;
+check=1;
+}
+if(check === 0)
+console.log("No repeated no. found");
+}
